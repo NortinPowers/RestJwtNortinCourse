@@ -1,7 +1,7 @@
 package by.nortin.restjwtproject.utils;
 
 import by.nortin.restjwtproject.dto.ExceptionResponse;
-import by.nortin.restjwtproject.dto.MessageResponse;
+import by.nortin.restjwtproject.dto.SuccessResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -33,8 +33,8 @@ public class ResponseUtils {
     public static final String EXPIRED_JWT_EXCEPTION_MESSAGE = "The lifecycle of the token is completed";
     public static final String SIGNATURE_EXCEPTION_MESSAGE = "Incorrect signature";
 
-    public static MessageResponse getSuccessResponse(String message, String className) {
-        return new MessageResponse(HttpStatus.OK, String.format(message, className.toLowerCase()), className);
+    public static SuccessResponse getSuccessResponse(String message, String className) {
+        return new SuccessResponse(HttpStatus.OK, String.format(message, className.toLowerCase()), className);
     }
 
     public static ExceptionResponse getExceptionResponse(HttpStatus status, String message, Exception exception) {

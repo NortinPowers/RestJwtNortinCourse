@@ -18,5 +18,6 @@ public class Constants {
     public static final String AUTHOR_PATTERN = "[A-Z]+([a-zA-Z-`]+)*+\\s+[A-Z]+([a-zA-Z]+)*";
     public static final String PASSWORD_NOT_MATCHING = "The entered passwords do not match";
     public static final String USER_EXIST = "User with this username already exist";
+    public static final String SECURITY_SWAGGER = "bearerAuth";
 
 }

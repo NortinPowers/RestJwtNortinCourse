@@ -46,6 +46,7 @@ public class SwaggerConfig {
                         .addSecuritySchemes(securitySchemeName, new SecurityScheme()
                                 .name(securitySchemeName)
                                 .type(Type.HTTP)
+                                .scheme("bearer")
                                 .bearerFormat("JWT")))
                 .info(info)
                 .servers(List.of(devServer));

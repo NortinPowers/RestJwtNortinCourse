@@ -14,6 +14,7 @@
 <li>Creation and filling of the database through migrations, creation of entity classes and implementation of interfaces for linking entities with spring security</li>
 <li>Creating a token manager, creating request and response objects, creating an authentication controller</li>
 <li>Creating and configuring a jwt-filter. First tests using postman</li>
+<li>Creating and configuring user database interaction with spring security</li>
 <li>Clearing the user base, validating objects and creating custom validation</li>
 <li>Creating an error handler and universal response generation methods, correcting custom annotations</li>
 <li>Creating typical error handlers, creating an access error handler, changing the filter</li>
@@ -21,6 +22,7 @@
 <li>Creating a database of books, starting the development of all logic related to working with books</li>
 <li>Completion creation of the logic of working with the database of books, the use of java reflection</li>
 <li>Configuring swagger, connecting the security configuration books service</li>
+<li>Annotating controllers to create documentation</li>
 
 <h4>Contact:</h4>
 <p>a.nortin@gmail.com</p>
