@@ -2,7 +2,6 @@ package by.nortin.restjwtproject.dto;
 
 import static by.nortin.restjwtproject.utils.Constants.AUTHOR_PATTERN;
 
-import by.nortin.restjwtproject.utils.Constants;
 import jakarta.validation.constraints.Pattern;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

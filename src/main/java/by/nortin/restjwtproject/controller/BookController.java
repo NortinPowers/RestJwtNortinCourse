@@ -12,6 +12,7 @@ import by.nortin.restjwtproject.service.BookService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -39,18 +40,21 @@ public class BookController {
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<BaseResponse> create(@RequestBody BookDto bookDto) {
         bookService.save(bookDto);
         return ResponseEntity.ok(getSuccessResponse(CREATION_MESSAGE, BOOK));
     }
 
     @PatchMapping("{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<BaseResponse> update(@PathVariable("id") Long id, @RequestBody BookDto bookDto) {
         bookService.update(id, bookDto);
-        return ResponseEntity.ok(getSuccessResponse(UPDATE_MESSAGE, "Book"));
+        return ResponseEntity.ok(getSuccessResponse(UPDATE_MESSAGE, BOOK));
     }
 
     @DeleteMapping("{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<BaseResponse> delete(@PathVariable("id") Long id) {
         bookService.delete(id);
         return ResponseEntity.ok(getSuccessResponse(DELETE_MESSAGE, BOOK));

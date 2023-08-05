@@ -1,6 +1,5 @@
 package by.nortin.restjwtproject.handler;
 
-import static by.nortin.restjwtproject.utils.ResponseUtils.ACCESS_DENIED_EXCEPTION_MESSAGE;
 import static by.nortin.restjwtproject.utils.ResponseUtils.BAD_CREDENTIALS_EXCEPTION_MESSAGE;
 import static by.nortin.restjwtproject.utils.ResponseUtils.BOOK_NOT_FOUND_EXCEPTION_MESSAGE;
 import static by.nortin.restjwtproject.utils.ResponseUtils.DATA_INTEGRITY_VIOLATION_EXCEPTION_MESSAGE;

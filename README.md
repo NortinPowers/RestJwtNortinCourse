@@ -18,8 +18,9 @@
 <li>Creating an error handler and universal response generation methods, correcting custom annotations</li>
 <li>Creating typical error handlers, creating an access error handler, changing the filter</li>
 <li>Creating a handler for empty token, creating an admin controller, configuring methods for assigning an administrator and for outputting all users</li>
-<li>Сreating a database of books, starting the development of all logic related to working with books</li>
-<li></li>
+<li>Creating a database of books, starting the development of all logic related to working with books</li>
+<li>Completion creation of the logic of working with the database of books, the use of java reflection</li>
+<li>Configuring swagger, connecting the security configuration books service</li>
 
 <h4>Contact:</h4>
 <p>a.nortin@gmail.com</p>

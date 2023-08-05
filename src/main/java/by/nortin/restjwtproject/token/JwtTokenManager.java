@@ -4,7 +4,6 @@ import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import java.security.Key;
 import java.time.Duration;
 import java.util.Date;
