@@ -24,7 +24,7 @@
 <li>Configuring swagger, connecting the security configuration books service</li>
 <li>Annotating controllers to create documentation</li>
 <li>Completing the creation of annotations for documentation</li>
-<li>Сreating the first integration tests</li>
+<li>Creating the first integration tests</li>
 
 <h4>Contact:</h4>
 <p>a.nortin@gmail.com</p>

@@ -1,9 +1,11 @@
 package by.nortin.restjwtproject.token;
 
+import static by.nortin.restjwtproject.utils.Constants.ROLES;
 import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.time.Duration;
 import java.util.Date;
@@ -25,7 +27,7 @@ public class JwtTokenManager {
     private Duration jwtLifetime;
 
     public JwtTokenManager(@Value("${jwt.secret}") String secret) {
-        this.key = new SecretKeySpec(secret.getBytes(), HS256.getJcaName());
+        this.key = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), HS256.getJcaName());
     }
 
     public String generateJwtToken(UserDetails userDetails) {
@@ -33,7 +35,7 @@ public class JwtTokenManager {
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
                 .toList();
-        claims.put("roles", roles);
+        claims.put(ROLES, roles);
         Date issuedDate = new Date();
         Date expiredDeate = new Date(issuedDate.getTime() + jwtLifetime.toMillis());
         return Jwts.builder()
@@ -51,7 +53,7 @@ public class JwtTokenManager {
 
     @SuppressWarnings("unchecked")
     public List<String> getUserRoles(String token) {
-        return getAllClaimsFromToken(token).get("roles", List.class);
+        return getAllClaimsFromToken(token).get(ROLES, List.class);
     }
 
     private Claims getAllClaimsFromToken(String token) {

@@ -7,6 +7,7 @@ public class Constants {
 
     public static final String ROLE_ADMIN = "ROLE_ADMIN";
     public static final String ROLE_USER = "ROLE_USER";
+    public static final String ROLES = "roles";
     public static final String USER = "User";
     public static final String BOOK = "Book";
     public static final String USERNAME_NOT_FOUND_EXCEPTION_MESSAGE = "User not found";

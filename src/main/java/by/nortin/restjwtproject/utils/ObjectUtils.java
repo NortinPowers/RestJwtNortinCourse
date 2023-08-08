@@ -10,16 +10,16 @@ import org.springframework.beans.BeanWrapperImpl;
 @UtilityClass
 public class ObjectUtils {
 
-    public static <T> String[] getIgnoredProperties(T t, String...customProperties) {
+    public static <T> String[] getIgnoredProperties(T t, String... customProperties) {
         return concatWithArrayCopy(getNullProperties(t), customProperties);
     }
 
     private String[] getNullProperties(Object source) {
         final BeanWrapper beanWrapper = new BeanWrapperImpl(source);
         return Stream.of(beanWrapper.getPropertyDescriptors())
-                .map(FeatureDescriptor::getName)
-                .filter(propertyName -> beanWrapper.getPropertyValue(propertyName) == null)
-                .toArray(String[]::new);
+                     .map(FeatureDescriptor::getName)
+                     .filter(propertyName -> beanWrapper.getPropertyValue(propertyName) == null)
+                     .toArray(String[]::new);
     }
 
     private <T> T[] concatWithArrayCopy(T[] firstArray, T[] secondArray) {
@@ -27,4 +27,4 @@ public class ObjectUtils {
         System.arraycopy(secondArray, 0, result, firstArray.length, secondArray.length);
         return result;
     }
- }
+}
