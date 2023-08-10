@@ -9,10 +9,10 @@ import by.nortin.restjwtproject.validator.PasswordMatching;
 import by.nortin.restjwtproject.validator.UserExist;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.logging.log4j.core.config.plugins.validation.constraints.NotBlank;
 
 @Getter
 @Setter

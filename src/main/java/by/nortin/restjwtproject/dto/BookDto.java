@@ -3,11 +3,11 @@ package by.nortin.restjwtproject.dto;
 import static by.nortin.restjwtproject.utils.Constants.AUTHOR_PATTERN;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.logging.log4j.core.config.plugins.validation.constraints.NotBlank;
 
 @Getter
 @Setter
