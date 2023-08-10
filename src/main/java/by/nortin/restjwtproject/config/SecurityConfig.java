@@ -43,7 +43,7 @@ public class SecurityConfig {
                 .exceptionHandling(exceptionHandling -> exceptionHandling.accessDeniedHandler(customAccessDeniedHandler))
                 .exceptionHandling(exceptionHandling -> exceptionHandling.authenticationEntryPoint(
                         (request, response, exception) -> getEmptyTokenResponse(response)
-                        ))
+                ))
                 .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
                         .requestMatchers("/main/admin", "/admin/**").hasRole("ADMIN")
                         .requestMatchers("main/security", "/book", "/book/**").authenticated()

@@ -1,4 +1,4 @@
-package by.nortin.restjwtproject.restjwtproject.controller;
+package by.nortin.restjwtproject.controller;
 
 import static by.nortin.restjwtproject.utils.ResponseUtils.CHANGE_ROLE_MESSAGE;
 import static by.nortin.restjwtproject.utils.ResponseUtils.DATA_SOURCE_LOOKUP_FAILURE_EXCEPTION_MESSAGE;

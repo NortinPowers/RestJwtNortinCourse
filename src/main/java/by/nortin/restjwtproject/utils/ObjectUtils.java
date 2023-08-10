@@ -17,9 +17,9 @@ public class ObjectUtils {
     private String[] getNullProperties(Object source) {
         final BeanWrapper beanWrapper = new BeanWrapperImpl(source);
         return Stream.of(beanWrapper.getPropertyDescriptors())
-                     .map(FeatureDescriptor::getName)
-                     .filter(propertyName -> beanWrapper.getPropertyValue(propertyName) == null)
-                     .toArray(String[]::new);
+                .map(FeatureDescriptor::getName)
+                .filter(propertyName -> beanWrapper.getPropertyValue(propertyName) == null)
+                .toArray(String[]::new);
     }
 
     private <T> T[] concatWithArrayCopy(T[] firstArray, T[] secondArray) {

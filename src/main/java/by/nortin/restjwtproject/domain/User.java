@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import java.io.Serializable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +14,7 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = true)
 @Table(name = "users")
 @Entity
-public class User extends BaseDomain {
+public class User extends BaseDomain implements Serializable {
 
     private String username;
     private String password;
