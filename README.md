@@ -27,6 +27,7 @@
 <li>Creating the first integration tests</li>
 <li>Creating the integration tests for AuthController</li>
 <li>Creating the integration tests for BookController</li>
+<li>Creating the tests for mappers, customDetailsService and objectUtils</li>
 
 <h4>Contact:</h4>
 <p>a.nortin@gmail.com</p>
