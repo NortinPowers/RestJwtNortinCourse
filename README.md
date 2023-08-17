@@ -1,6 +1,8 @@
 <h1 align="center">Java course from Nortin</h1>
 <h3 align="center">REST with JWT-token</h3>
 
+<h3 align="center">[YouTube](https://www.youtube.com/watch?v=R2wC4-Rv1hE&list=PL2m-AKyHJWPeJI6bo-Rt0ulCXTEvmNnyx)</h3>
+
 <h4>Used by:</h4>
 <li>Spring (Boot, Data, Validator, Security), JJWT, JPA, Mapstruct, JUnit, Mockito</li>
 <li>PostgreSQL DB, Flyway</li>
